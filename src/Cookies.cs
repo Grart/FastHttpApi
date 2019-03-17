@@ -8,7 +8,15 @@ namespace BeetleX.FastHttpApi
     {
         private Dictionary<string, string> mItems = new Dictionary<string, string>(4);
 
-        public string this[string name]
+		public Dictionary<string, string> Items
+		{
+			get
+			{
+				return mItems;
+			}
+		}
+
+		public string this[string name]
         {
             get
             {

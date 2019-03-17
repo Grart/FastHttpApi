@@ -21,7 +21,7 @@ namespace Cluster.Client
 
         static async void Test()
         {
-            await HttpClusterApi.LoadNodeSource("default", "http://localhost:8080");
+            await HttpClusterApi.LoadNodeSource("default", "http://localhost:9090");
             int threads = 40;
             for (int i = 0; i < threads; i++)
             {
