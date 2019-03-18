@@ -129,7 +129,10 @@ namespace BeetleX.FastHttpApi
             }
         }
 
-        public void Decode(ISession session, Stream stream)
+		/// <summary>
+		/// <see cref="TcpSession.Receive"/> call
+		/// </summary>
+		public void Decode(ISession session, Stream stream)
         {
             HttpToken token = (HttpToken)session.Tag;
             PipeStream pstream = stream.ToPipeStream();
