@@ -704,13 +704,19 @@ namespace BeetleX.FastHttpApi
             }
         }
 
-        public override void SessionPacketDecodeCompleted(IServer server, PacketDecodeCompletedEventArgs e)
+		/// <summary>
+		/// <see cref="TcpServer.OnPacketDecodeCompleted"/>   call
+		/// </summary>
+		/// <param name="server"></param>
+		/// <param name="e"></param>
+		public override void SessionPacketDecodeCompleted(IServer server, PacketDecodeCompletedEventArgs e)
         {
             if (Options.SessionTimeOut > 0)
             {
                 BaseServer.UpdateSession(e.Session);
             }
-            OnRequestHandler(e);
+			/// http call to =>>  <see cref="OnHttpRequest"/> 
+			OnRequestHandler(e);
         }
 
 
