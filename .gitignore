@@ -1,3 +1,5 @@
+.vs
+.vs/
 .vs/BeetleX.FastHttpApi/v15/Server/sqlite3/
 samples/HttpApiServer.JsonBody/Properties/
 samples/HttpApiServer.JsonBody/bin/
